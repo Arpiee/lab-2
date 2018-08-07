@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+
+
+
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+
+<style>
+  body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+
+  a {
+    color: #00B7FF;
+  }
+  *, html {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  body {
+    font-family: Roboto;
+  }
+
+  header {
+    height: 100vh;
+    width: 100%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    -moz-clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    -o-clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+  }
+
+  /*sticky navbar code*/
+  .sticky {
+    z-index: 50;
+    position: fixed;
+    background-color: burlywood;
+    height: 50px !important;
+    box-shadow: 0px 2px 5px 2px;
+  }
+  .sticky ul {
+    margin-top: 10px !important;
+  }
+
+  #header-area {
+    background-image: linear-gradient(rgba(166, 177, 180, 0.5), rgba(166, 177, 180, 0.5)), url("http://www.pwsd.archidiecezja.pl/wp-content/uploads/2017/01/bg-wait.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  #header-area .navigation {
+    height: 70px;
+    line-height: 20px;
+    top: 0;
+    width: 100%;
+  }
+  #header-area .navigation ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  #header-area .navigation ul li {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  #header-area .navigation ul li a {
+    margin-top: -5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: 23px;
+    color: #5e7894;
+  }
+  #header-area .navigation ul li a:hover {
+    transition: All 0.5s ease-in;
+    color: #4a576b;
+  }
+  #header-area .navigation .logo {
+    font-size: 1.5em;
+    font-weight: Bold;
+    color: #252839;
+  }
+  #header-area .navigation .logo:hover {
+    color: #252839;
+  }
+  #header-area .head-content {
+    z-index: -1;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+  }
+  #header-area .head-content h3 {
+    font-weight: normal;
+    margin-top: 10px;
+    height: 150px;
+    display: inline-block;
+    background-color: #cbcbc5;
+    color: #252839;
+    padding: 40px 20px;
+    -webkit-clip-path: polygon(50% 17%, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    clip-path: polygon(50% 17%, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
+    background-size: cover;
+    overflow: hidden;
+  }
+  #header-area .head-content h3:after {
+    content: '';
+    height: 2px;
+    width: 50px;
+    background-color: #252839;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  #header-area .head-content h4 {
+    font-weight: normal;
+    color: white;
+  }
+  #header-area .head-content h6 {
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .sec1-area {
+    background-color: white;
+    width: 100%;
+  }
+  .sec1-area h4 {
+    margin-top: 50px;
+    color: #4a576b;
+  }
+  .sec1-area h4:after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: burlywood;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .sec1-area h6 {
+    font-size: 1em;
+    color: #4a576b;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .sec1-area .sec1-content {
+    color: burlywood;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+  .sec1-area .sec1-content-img {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .sec1-area .sec1-content-img img {
+    border: 3px solid burlywood;
+  }
+
+  .sec2-area {
+    background-color: #4a576b;
+  }
+  .sec2-area h4 {
+    color: white;
+    padding-top: 50px;
+  }
+  .sec2-area h4:after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: burlywood;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  .sec2-area h6 {
+    margin-top: 5px;
+    color: burlywood;
+    display: inline-block;
+    padding: 8px 20px;
+  }
+  .sec2-area h6:after {
+    content: '';
+    height: 3px;
+    width: 25px;
+    background-color: burlywood;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  .sec2-area .sec2-heading {
+    margin-top: 20px;
+    color: burlywood;
+  }
+  .sec2-area .sec2-img {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-top: 30px;
+  }
+  .sec2-area .sec2-img .img-content img {
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 3px 2px burlywood;
+    width: auto;
+    height: 150px;
+  }
+  .sec2-area .sec2-img .img-content img:hover {
+    transition: All 0.5s ease;
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 6px 5px burlywood;
+  }
+  .sec2-area .sec2-img .img-content p {
+    color: burlywood;
+    text-align: justify center;
+  }
+
+  .sec3-area {
+    background-color: #252839;
+  }
+  .sec3-area h4 {
+    padding-top: 50px;
+    color: white;
+  }
+  .sec3-area h4:after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: burlywood;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .sec3-area p {
+    color: burlywood;
+  }
+  .sec3-area p:after {
+    content: '';
+    height: 3px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: burlywood;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .sec3-area p span {
+    color: white;
+  }
+  .sec3-area .contact-form {
+    max-width: 60%;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+  .sec3-area .contact-form .textarea {
+    min-height: 200px;
+  }
+  .sec3-area .contact-form .form-control {
+    box-shadow: none;
+    border: 1px solid burlywood;
+    background-color: #252839;
+  }
+  .sec3-area .contact-form .form-control:focus {
+    border-color: burlywood;
+    color: burlywood;
+  }
+  .sec3-area .contact-form .btn-send {
+    border-radius: 25px;
+    padding: 5px 30px;
+    margin-bottom: 50px;
+    color: burlywood;
+    background-color: transparent;
+    border: 1px solid burlywood;
+  }
+  .sec3-area .contact-form .btn-send:hover {
+    border-color: burlywood;
+    color: #252839;
+    background-color: burlywood;
+  }
+
+  .footer-area {
+    background-color: #a6b1b4;
+  }
+  .footer-area ul {
+    list-style: none;
+    max-width: 1140px;
+  }
+  .footer-area ul li {
+    display: inline-block;
+    margin: 0 auto;
+    margin: 20px 20px 10px 20px;
+  }
+  .footer-area ul li a {
+    text-decoration: none;
+    color: #252839;
+  }
+  .footer-area ul li a i {
+    font-size: 1.5em;
+  }
+  .footer-area ul li a i:hover {
+    transition: All 0.5s ease-in;
+    color: #4a576b;
+  }
+  .footer-area h6 {
+    padding-bottom: 10px;
+  }
+  .footer-area h6 span {
+    font-weight: lighter;
+  }
+
+  .back-to-top {
+    position: fixed;
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+  }
+
+</style>
+</head>
+
+<body>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Prashant's Portfolio</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../Portfolio/stylesheet/main.css">
+
+
+
+</head>
+
+<body>
+<header id="header-area" id="home">
+  <div class="navigation text-center">
+    <ul>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a class="logo" href="#home">Arpit <br> Kohli</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+      <li><a href="#social">SOCIAL</a></li>
+    </ul>
+  </div>
+
+  <div class="container head-content text-center">
+    <h4>WELCOME</h4>
+    <h6>TO</h6>
+    <h3>MY<br> PORTFOLIO</h3>
+  </div>
+</header>
+
+<section class="sec1-area" id="about">
+  <div class="container text-center">
+    <h4>ABOUT</h4>
+    <h6>A Web Developer In Training</h6>
+
+    <div class="row1">
+      <p><h2>NAME: Arpit Kohli</h2><br>
+      <h2>Course name: IMDW</h2>
+      <br><h2>Age: 21</h2><br>
+      <br><h2>Autobiography: I am Arpit Kohli, I am persuing Interactive Media Design-Web program. <br>I have studied all the softwares like visual Sutdio, Web storm, Adobe Photoshop and many more. I have a keen interest in Htm;l, css, javascript and Asp.Net.
+      <br>
+  </div>
+</section>
+
+
+<section class="sec2-area" id="work">
+  <div class="container text-center">
+    <h4>WORK</h4>
+    <h6>TOOLS <br>USED</h6>
+    <div class="sec2-heading row">
+      <div class="head-list col-md-4">
+        HTML5
+      </div>
+      <div class="head-list col-md-4">
+        CSS3
+      </div>
+      <div class="head-list col-md-4">
+        JAVASCRIPT
+      </div>
+      <div class="head-list col-md-4">
+        BOOTSTRAP
+      </div>
+      <div class="head-list col-md-4">
+        JQUERY
+      </div>
+      <div class="head-list col-md-4">
+        SCSS
+      </div>
+    </div>
+    <div class="sec2-img row">
+      <div class="img-content col-md-4">
+        <img src="https://res.cloudinary.com/twenty20/private_images/t_watermark-criss-cross-10/v1458819211000/photosp/4c4a597a-9d01-4bfb-a1b5-5e0d8142f15e/stock-photo-pencil-sketch-design-creative-digital-web-professional-graphics-graphic-design-4c4a597a-9d01-4bfb-a1b5-5e0d8142f15e.jpg" alt="" >
+      </div>
+      <div class="img-content col-md-4">
+        <img src="https://static.pexels.com/photos/209151/pexels-photo-209151.jpeg" alt="" >
+      </div>
+      <div class="img-content col-md-4">
+        <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="" >
+      </div>
+      <div class="img-content col-md-12">
+        <img src="https://static.pexels.com/photos/114907/pexels-photo-114907.jpeg" alt="" width="320" height="150">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec3-area" id="contact">
+  <div class="container">
+
+    <div class="sec3-head text-center">
+      <h4>CONTACT</h4>
+      <p><strong><span>E-mail:</span></strong> </p>
+    </div>
+
+    <form role="form" class="contact-form row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" class="form-control" id="c-name" placeholder="Name">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="email" class="form-control" id="c-email" placeholder="E-mail">
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group">
+          <textarea class="form-control textarea" rows="5" id="c-message" placeholder="Message"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-send">SEND</button>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+<footer class="footer-area" id="social">
+  <div class="container">
+    <ul class="footer text-center">
+      <li><a href=""><i class="fa fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+      <li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+    <h6 class="design text-center"><span>Designed By:</span> Arpit Kohli. <span>All Rights Reserved</span></h6>
+  </div>
+</footer>
+
+<a class="back-to-top" href="#">TOP</a>
+<!--Jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+
+<script type="text/javascript" src="../Portfolio/js/scroll.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+</body>
+
+</html>
